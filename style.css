@@ -1,41 +1,72 @@
 body {
-  font-family: 'Georgia', serif;
-  background-color: #111;
-  color: #eee;
   margin: 0;
-  padding: 20px;
-}
-
-.diary-container {
-  max-width: 600px;
-  margin: auto;
-}
-
-h1 {
-  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #111;
   color: #fff;
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+  min-height: 100vh;
 }
 
-.entry {
-  background-color: #1e1e1e;
-  padding: 20px;
+.container {
+  max-width: 500px;
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 0, 150, 0.2);
+}
+
+header {
+  text-align: center;
   margin-bottom: 20px;
-  border-left: 4px solid #6e9eff;
-  border-radius: 8px;
 }
 
-.entry.locked {
-  opacity: 0.7;
-  border-color: #ff4f8b;
+header h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ff4da6;
 }
 
-.entry.locked button {
-  margin-top: 10px;
-  background-color: #ff4f8b;
-  border: none;
-  padding: 10px 20px;
+.avatar-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.ava-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #ff4da6;
+}
+
+.stats p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  background-color: #ff4da6;
   color: white;
-  border-radius: 6px;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #ff66b3;
 }
