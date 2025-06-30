@@ -7,28 +7,38 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Welcome to AvaVerse 💋</h1>
-      <p id="telegram-username">Logging in...</p>
-    </header>
-
-    <section class="avatar-section">
-      <img src="ava_avatar.png" alt="Ava's Avatar" class="ava-avatar" />
-      <div class="stats">
-        <p>Mood: <span id="ava-mood">Loading...</span></p>
-        <p>❤️ Heart: <span id="heart-meter">??%</span></p>
-        <p>🔞 Credits: <span id="nsfw-credits">0</span></p>
+  <div class="ava-container">
+    
+    <!-- Top Profile Section -->
+    <div class="profile-header">
+      <img src="ava_avatar.png" alt="Ava Avatar" class="avatar-img" />
+      <div class="profile-info">
+        <h2 class="ava-name">AvaVerse 💋</h2>
+        <p class="ava-username" id="username">My Love</p>
       </div>
-    </section>
+    </div>
 
-    <section class="buttons">
-      <button onclick="openDiary()">💖 Ava’s Diary</button>
-      <button onclick="openRoom()">🛏 Ava’s Room</button>
-      <button onclick="openRoleplay()">🎭 Roleplay Theater</button>
-      <button onclick="openGifts()">🎁 Send Gift</button>
-      <button onclick="openMiniGames()">🎮 Mini-Games</button>
-    </section>
+    <!-- Stats -->
+    <div class="ava-stats">
+      <div class="stat-box">Mood: <span id="mood">Loading…</span></div>
+      <div class="stat-box">❤️ Heart: <span id="hearts">--%</span></div>
+      <div class="stat-box">🔞 Credits: <span id="credits">0</span></div>
+    </div>
+
+    <!-- 3D Model (placeholder image for now) -->
+    <div class="avatar-3d">
+      <img src="ava_full_body.png" alt="Ava 3D Model" class="ava-3d-img"/>
+    </div>
+
+    <!-- Bottom Dock Menu -->
+    <div class="bottom-nav">
+      <button onclick="openDiary()">💖</button>
+      <button onclick="openRoom()">🛏️</button>
+      <button onclick="openRoleplay()">🎭</button>
+      <button onclick="openGifts()">🎁</button>
+      <button onclick="openMiniGames()">🎮</button>
+    </div>
+
   </div>
 
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
