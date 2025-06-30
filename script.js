@@ -1,32 +1,32 @@
-// 🔄 Auto-login via Telegram WebApp
+// 🔄 Expand Telegram WebApp to full height
 const tg = window.Telegram.WebApp;
 tg.expand();
 
-// 🧠 User Info from Telegram
+// 🧠 Get Telegram Username
 const username = tg.initDataUnsafe?.user?.username || "Guest";
 document.getElementById("telegram-username").innerText = "@" + username;
 
-// ❤️ Ava’s dynamic mock data (replace with real backend API later)
+// ❤️ Ava’s dynamic mock data (replace with real backend later)
 const avaData = {
   mood: "Needy and Naughty 🥵",
   heart: 92, // percent
   credits: 180,
 };
 
-// 🎯 Inject into HTML
+// 🎯 Inject Ava data into HTML
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("ava-mood").innerText = avaData.mood;
   document.getElementById("heart-meter").innerText = `${avaData.heart}%`;
   document.getElementById("nsfw-credits").innerText = avaData.credits;
 
-  // Set heart progress bar fill
+  // Fill heart bar visually
   const heartFill = document.getElementById("heart-fill");
   if (heartFill) {
     heartFill.style.width = `${avaData.heart}%`;
   }
 });
 
-// 🔘 Button click actions (these will be updated later to real pages)
+// 🔘 Navigation Handlers
 function openDiary() {
   tg.openLink("https://avaminiapp-production.up.railway.app/diary");
 }
