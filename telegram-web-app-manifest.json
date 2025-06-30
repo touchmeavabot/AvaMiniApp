@@ -1,0 +1,16 @@
+{
+  "name": "Ava's Diary",
+  "short_name": "Ava",
+  "description": "Explore Ava's seductive world, thoughts, and secrets 💋",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://avaminiapp-production.up.railway.app",
+  "display": "standalone",
+  "theme_color": "#111111",
+  "background_color": "#111111"
+}
