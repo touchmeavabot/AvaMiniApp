@@ -1,20 +1,40 @@
-let tg = window.Telegram.WebApp;
-
-// 🟣 Expand Mini App full screen
+// ✅ Auto-login via Telegram WebApp
+const tg = window.Telegram.WebApp;
 tg.expand();
 
-// 💋 Sample Ava mood (will be dynamic later)
-const avaMood = "Needy and Naughty 🥵";
-const nsfwCredits = 120;
-const heartMeter = "❤️❤️❤️🤍🤍";
-
-// 👤 Set user data from Telegram
+// ✅ Set Telegram username
 const username = tg.initDataUnsafe?.user?.first_name || "My Love";
+document.getElementById("telegram-username").innerText = username;
 
-// ✨ Inject into page
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("username").textContent = username;
-  document.getElementById("mood").textContent = avaMood;
-  document.getElementById("credits").textContent = `${nsfwCredits} NSFW Credits`;
-  document.getElementById("hearts").textContent = heartMeter;
-});
+// ✅ Mock data for Ava's mood and stats (replace with real API later)
+const userStats = {
+  mood: "Flirty 😘",
+  hearts: "92%",
+  credits: 180,
+};
+
+// ✅ Display stats
+document.getElementById("ava-mood").innerText = userStats.mood;
+document.getElementById("heart-meter").innerText = userStats.hearts;
+document.getElementById("nsfw-credits").innerText = userStats.credits;
+
+// ✅ Button click handlers (use real links later)
+function openDiary() {
+  tg.openLink("https://avaminiapp-production.up.railway.app/diary");
+}
+
+function openRoom() {
+  tg.openLink("https://avaminiapp-production.up.railway.app/room");
+}
+
+function openRoleplay() {
+  tg.openLink("https://avaminiapp-production.up.railway.app/roleplay");
+}
+
+function openGifts() {
+  tg.openLink("https://avaminiapp-production.up.railway.app/gifts");
+}
+
+function openMiniGames() {
+  tg.openLink("https://avaminiapp-production.up.railway.app/games");
+}
