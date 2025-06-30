@@ -1,72 +1,101 @@
+/* Global Reset */
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #111;
-  color: #fff;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #1d1c3a, #2c2a4f);
+  color: white;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 30px 15px;
+  align-items: flex-start;
   min-height: 100vh;
 }
 
-.container {
-  max-width: 500px;
+.ava-container {
   width: 100%;
-  background-color: #1a1a1a;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 0, 150, 0.2);
+  max-width: 430px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-header h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #ff4da6;
-}
-
-.avatar-section {
+/* Header / Profile */
+.profile-header {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.ava-avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 10px;
-  object-fit: cover;
-  border: 2px solid #ff4da6;
+.avatar-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #ff66b2;
 }
 
-.stats p {
-  margin: 5px 0;
+.profile-info h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #ff66b2;
+}
+
+.ava-username {
+  margin: 0;
   font-size: 14px;
+  color: #ccc;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-button {
-  background-color: #ff4da6;
-  color: white;
-  border: none;
+/* Stats */
+.ava-stats {
+  background: #292845;
+  border-radius: 12px;
   padding: 12px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.2s;
+  margin-bottom: 20px;
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.3);
 }
 
-button:hover {
-  background-color: #ff66b3;
+.stat-box {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* Avatar 3D model */
+.avatar-3d {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.ava-3d-img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* Bottom Dock */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 430px;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  background: #1e1d36;
+  border-top: 1px solid #444;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+  z-index: 100;
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #ff66b2;
+  transition: transform 0.2s;
+}
+
+.bottom-nav button:active {
+  transform: scale(1.2);
 }
