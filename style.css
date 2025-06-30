@@ -1,101 +1,134 @@
-/* Global Reset */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #1d1c3a, #2c2a4f);
-  color: white;
+  background: #fff2f5;
+  color: #1d1d1d;
+}
+
+.main-container {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
 }
 
-.ava-container {
-  width: 100%;
-  max-width: 430px;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-/* Header / Profile */
 .profile-header {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  width: 90%;
 }
 
-.avatar-img {
-  width: 60px;
-  height: 60px;
+.avatar {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  border: 3px solid #ff66b2;
+  margin-right: 16px;
 }
 
-.profile-info h2 {
+.profile-info h1 {
   margin: 0;
-  font-size: 20px;
-  color: #ff66b2;
+  font-size: 24px;
+  color: #2e2e2e;
 }
 
-.ava-username {
-  margin: 0;
+#telegram-username {
   font-size: 14px;
-  color: #ccc;
+  color: #5e5e5e;
 }
 
-/* Stats */
-.ava-stats {
-  background: #292845;
+.tabs {
+  margin-top: 8px;
+}
+
+.tabs .tab {
+  padding: 8px 16px;
   border-radius: 12px;
-  padding: 12px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 8px rgba(255, 105, 180, 0.3);
+  border: none;
+  margin-right: 8px;
+  font-size: 14px;
+  background: #f2f2f2;
+  cursor: pointer;
+}
+
+.tabs .tab.active {
+  background: #d8e9ff;
+  color: #003b6f;
+}
+
+.mood-stats {
+  width: 90%;
+  margin-top: 20px;
 }
 
 .stat-box {
-  margin-bottom: 8px;
-  font-size: 15px;
-}
-
-/* Avatar 3D model */
-.avatar-3d {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.ava-3d-img {
-  width: 100%;
-  max-height: 360px;
-  object-fit: contain;
+  background: #ffeef2;
+  padding: 12px;
   border-radius: 12px;
+  margin-bottom: 12px;
 }
 
-/* Bottom Dock */
+.label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.value {
+  font-size: 16px;
+}
+
+.progress-bar {
+  position: relative;
+  background: #ffd2dc;
+  height: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 92%;
+  height: 100%;
+  background: linear-gradient(to right, #ff8aad, #ffbf8b);
+  border-radius: 8px;
+}
+
+.progress-text {
+  position: absolute;
+  right: 10px;
+  top: -22px;
+  font-size: 14px;
+  color: #1d1d1d;
+}
+
+.ava-model img {
+  width: 220px;
+  margin-top: 10px;
+}
+
 .bottom-nav {
   position: fixed;
   bottom: 0;
-  left: 0;
   width: 100%;
-  max-width: 430px;
+  background: #fff0f5;
+  border-top: 1px solid #ddd;
   display: flex;
   justify-content: space-around;
-  padding: 12px 0;
-  background: #1e1d36;
-  border-top: 1px solid #444;
-  box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
-  z-index: 100;
+  padding: 10px 0;
 }
 
 .bottom-nav button {
   background: none;
   border: none;
-  font-size: 24px;
-  color: #ff66b2;
-  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #333;
 }
 
-.bottom-nav button:active {
-  transform: scale(1.2);
+.bottom-nav img {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 4px;
 }
