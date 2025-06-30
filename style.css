@@ -1,0 +1,41 @@
+body {
+  font-family: 'Georgia', serif;
+  background-color: #111;
+  color: #eee;
+  margin: 0;
+  padding: 20px;
+}
+
+.diary-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.entry {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid #6e9eff;
+  border-radius: 8px;
+}
+
+.entry.locked {
+  opacity: 0.7;
+  border-color: #ff4f8b;
+}
+
+.entry.locked button {
+  margin-top: 10px;
+  background-color: #ff4f8b;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
