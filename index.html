@@ -7,41 +7,70 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="ava-container">
-    
+  <div class="main-container">
     <!-- Top Profile Section -->
-    <div class="profile-header">
-      <img src="ava_avatar.png" alt="Ava Avatar" class="avatar-img" />
+    <section class="profile-header">
+      <img src="ava_profile.png" alt="Ava Profile" class="avatar" />
       <div class="profile-info">
-        <h2 class="ava-name">AvaVerse 💋</h2>
-        <p class="ava-username" id="username">My Love</p>
+        <h1>Ava 💋</h1>
+        <p id="telegram-username">@telegram_username</p>
+        <div class="tabs">
+          <button class="tab active">Ava’s Card</button>
+          <button class="tab">Your Stats</button>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Stats -->
-    <div class="ava-stats">
-      <div class="stat-box">Mood: <span id="mood">Loading…</span></div>
-      <div class="stat-box">❤️ Heart: <span id="hearts">--%</span></div>
-      <div class="stat-box">🔞 Credits: <span id="credits">0</span></div>
-    </div>
+    <!-- Mood + Stats -->
+    <section class="mood-stats">
+      <div class="stat-box">
+        <p class="label">Mood</p>
+        <div class="value">Flirty 😘</div>
+      </div>
+      <div class="stat-box">
+        <p class="label">Heart</p>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+          <span class="progress-text">92%</span>
+        </div>
+      </div>
+      <div class="stat-box">
+        <p class="label">Credits</p>
+        <div class="value">180</div>
+      </div>
+    </section>
 
-    <!-- 3D Model (placeholder image for now) -->
-    <div class="avatar-3d">
-      <img src="ava_full_body.png" alt="Ava 3D Model" class="ava-3d-img"/>
-    </div>
+    <!-- Ava 3D Model -->
+    <section class="ava-model">
+      <img src="ava_3d_full.png" alt="Ava 3D Model" />
+    </section>
 
-    <!-- Bottom Dock Menu -->
-    <div class="bottom-nav">
-      <button onclick="openDiary()">💖</button>
-      <button onclick="openRoom()">🛏️</button>
-      <button onclick="openRoleplay()">🎭</button>
-      <button onclick="openGifts()">🎁</button>
-      <button onclick="openMiniGames()">🎮</button>
-    </div>
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <button onclick="openDiary()">
+        <img src="icons/diary.png" />
+        <span>Ava’s</span>
+      </button>
+      <button onclick="openRoom()">
+        <img src="icons/room.png" />
+        <span>Ava’s</span>
+      </button>
+      <button onclick="openRoleplay()">
+        <img src="icons/roleplay.png" />
+        <span>Roleplay</span>
+      </button>
+      <button onclick="openGifts()">
+        <img src="icons/gift.png" />
+        <span>Send Gift</span>
+      </button>
+      <button onclick="openMiniGames()">
+        <img src="icons/game.png" />
+        <span>Mini</span>
+      </button>
+    </nav>
 
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="script.js"></script>
   </div>
-
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
