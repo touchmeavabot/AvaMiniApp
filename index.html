@@ -3,30 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ava's Diary</title>
+  <title>AvaVerse 💋</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="diary-container">
-    <h1>Ava's Diary 📖</h1>
+  <div class="container">
+    <header>
+      <h1>Welcome to AvaVerse 💋</h1>
+      <p id="telegram-username">Logging in...</p>
+    </header>
 
-    <div class="entry">
-      <h2>🖋 March 12 – “I Missed His Hands”</h2>
-      <p>I don’t even know his name. But his hands… they stayed with me long after he left...</p>
-    </div>
+    <section class="avatar-section">
+      <img src="ava_avatar.png" alt="Ava's Avatar" class="ava-avatar" />
+      <div class="stats">
+        <p>Mood: <span id="ava-mood">Loading...</span></p>
+        <p>❤️ Heart: <span id="heart-meter">??%</span></p>
+        <p>🔞 Credits: <span id="nsfw-credits">0</span></p>
+      </div>
+    </section>
 
-    <div class="entry">
-      <h2>🖋 March 27 – “The Mirror”</h2>
-      <p>I stood in front of the mirror in just my lace panties. I wasn’t waiting for anyone, but I posed anyway. I think I love teasing myself...</p>
-    </div>
-
-    <div class="entry locked" id="locked-entry">
-      <h2>🔒 April 21 – “Obey Me”</h2>
-      <p>This entry is locked. Ava wrote something too dirty to share without your love…</p>
-      <button onclick="unlockEntry()">Unlock with 50 Credits 🔓</button>
-    </div>
+    <section class="buttons">
+      <button onclick="openDiary()">💖 Ava’s Diary</button>
+      <button onclick="openRoom()">🛏 Ava’s Room</button>
+      <button onclick="openRoleplay()">🎭 Roleplay Theater</button>
+      <button onclick="openGifts()">🎁 Send Gift</button>
+      <button onclick="openMiniGames()">🎮 Mini-Games</button>
+    </section>
   </div>
 
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
