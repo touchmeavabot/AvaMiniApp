@@ -7,70 +7,60 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="main-container">
-    <!-- Top Profile Section -->
-    <section class="profile-header">
-      <img src="ava_profile.png" alt="Ava Profile" class="avatar" />
-      <div class="profile-info">
-        <h1>Ava 💋</h1>
-        <p id="telegram-username">@telegram_username</p>
-        <div class="tabs">
-          <button class="tab active">Ava’s Card</button>
-          <button class="tab">Your Stats</button>
+  <div class="card-container">
+    <!-- Profile Block -->
+    <div class="profile-header">
+      <div class="profile-card">
+        <img src="ava_profile.png" class="profile-pic" />
+        <div class="name-info">
+          <h1 class="name">Ava</h1>
+          <p class="username">@AvaBot</p>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Mood + Stats -->
-    <section class="mood-stats">
-      <div class="stat-box">
-        <p class="label">Mood</p>
-        <div class="value">Flirty 😘</div>
+    <!-- Mood and Heart Stats -->
+    <div class="stat-box gradient-box">
+      <p>Mood</p>
+      <span>Flirty 😘</span>
+    </div>
+    <div class="stat-box gradient-box">
+      <p>Heart</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 92%"></div>
       </div>
-      <div class="stat-box">
-        <p class="label">Heart</p>
-        <div class="progress-bar">
-          <div class="progress-fill"></div>
-          <span class="progress-text">92%</span>
-        </div>
+      <div class="credits">
+        <strong>NSFW</strong>
+        <span>180 Credits</span>
       </div>
-      <div class="stat-box">
-        <p class="label">Credits</p>
-        <div class="value">180</div>
-      </div>
-    </section>
+    </div>
 
-    <!-- Ava 3D Model -->
-    <section class="ava-model">
-      <img src="ava_3d_full.png" alt="Ava 3D Model" />
-    </section>
+    <!-- Character Model -->
+    <div class="avatar-box">
+      <img src="ava_3d_full.png" class="ava-character" />
+    </div>
 
-    <!-- Bottom Navigation -->
-    <nav class="bottom-nav">
-      <button onclick="openDiary()">
+    <!-- Bottom Buttons -->
+    <div class="button-grid">
+      <div class="icon-button">
         <img src="icons/diary.png" />
-        <span>Ava’s</span>
-      </button>
-      <button onclick="openRoom()">
-        <img src="icons/room.png" />
-        <span>Ava’s</span>
-      </button>
-      <button onclick="openRoleplay()">
-        <img src="icons/roleplay.png" />
-        <span>Roleplay</span>
-      </button>
-      <button onclick="openGifts()">
+        <span>Diary</span>
+      </div>
+      <div class="icon-button">
         <img src="icons/gift.png" />
-        <span>Send Gift</span>
-      </button>
-      <button onclick="openMiniGames()">
+        <span>Roleplay</span>
+      </div>
+      <div class="icon-button">
+        <img src="icons/roleplay.png" />
+        <span>Room</span>
+      </div>
+      <div class="icon-button">
         <img src="icons/game.png" />
-        <span>Mini</span>
-      </button>
-    </nav>
-
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="script.js"></script>
+        <span>Mini-Games</span>
+      </div>
+    </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
