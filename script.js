@@ -1,24 +1,24 @@
-// ✅ Auto-login via Telegram WebApp
+// Auto-login via Telegram WebApp
 const tg = window.Telegram.WebApp;
 tg.expand();
 
-// ✅ Set Telegram username
+// Get Telegram username
 const username = tg.initDataUnsafe?.user?.first_name || "My Love";
-document.getElementById("telegram-username").innerText = username;
+document.getElementById("username").innerText = username;
 
-// ✅ Mock data for Ava's mood and stats (replace with real API later)
+// Mock stats (replace with real backend API later)
 const userStats = {
   mood: "Flirty 😘",
   hearts: "92%",
   credits: 180,
 };
 
-// ✅ Display stats
-document.getElementById("ava-mood").innerText = userStats.mood;
-document.getElementById("heart-meter").innerText = userStats.hearts;
-document.getElementById("nsfw-credits").innerText = userStats.credits;
+// Show stats
+document.getElementById("mood").innerText = userStats.mood;
+document.getElementById("hearts").innerText = userStats.hearts;
+document.getElementById("credits").innerText = userStats.credits;
 
-// ✅ Button click handlers (use real links later)
+// Navigation buttons (link to your real routes)
 function openDiary() {
   tg.openLink("https://avaminiapp-production.up.railway.app/diary");
 }
