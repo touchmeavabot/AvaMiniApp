@@ -1,131 +1,290 @@
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #fdd3f3, #d4d3fd);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.card-container {
-  background: white;
-  border-radius: 30px;
-  padding: 25px;
-  width: 360px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Profile */
-.profile-card {
-  background: linear-gradient(to right, #ffe3f6, #ece1ff);
-  padding: 12px 18px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.profile-pic {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid white;
-}
-
-.name-info .name {
-  font-size: 20px;
-  color: #333;
-}
-
-.name-info .username {
-  color: #777;
-  font-size: 14px;
-}
-
-/* Gradient Info Boxes */
-.gradient-box {
-  background: linear-gradient(145deg, #f6c7ff, #c8c4ff);
-  border-radius: 20px;
-  padding: 16px;
+  background-color: #120013;
   color: white;
-  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.4);
-}
-
-.stat-box p {
-  font-weight: bold;
   font-size: 16px;
-  margin-bottom: 5px;
+  overflow-x: hidden;
 }
 
-.stat-box span {
-  font-size: 15px;
-}
-
-/* Progress bar */
-.progress-bar {
-  height: 12px;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 6px;
-  overflow: hidden;
-  margin: 10px 0;
-}
-
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(to right, #ff92ba, #ff5f7e);
-  border-radius: 6px;
-}
-
-.credits {
+/* Header */
+.header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #1b001e;
+  border-bottom: 1px solid #2c002f;
+}
+
+.header h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.close-btn,
+.dot-btn {
   font-size: 14px;
+  color: #ff87d0;
+  cursor: pointer;
 }
 
-/* Character */
-.avatar-box {
-  text-align: center;
+/* Status bar */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #1c001f;
+  border-bottom: 1px solid #2e0032;
 }
 
-.ava-character {
-  width: 200px;
-  height: auto;
+.status-bar .coin,
+.status-bar .energy {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-/* Button Grid */
-.button-grid {
+.status-bar img {
+  width: 20px;
+  height: 20px;
+}
+
+.plus-btn {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Section title */
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px;
+  color: #ff87d0;
+}
+
+/* Style Toggle Tabs */
+.style-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 12px;
+}
+
+.tab {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #2b0031;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.tab.active {
+  background: linear-gradient(to right, #ff4aa2, #ff87d0);
+  color: white;
+}
+
+/* Character Grid */
+.character-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+  padding: 0 16px 80px;
 }
 
-.icon-button {
-  background: linear-gradient(145deg, #ffb3e9, #9fc9ff);
-  border-radius: 20px;
-  padding: 10px;
+.card {
+  background: #1c001f;
+  border-radius: 16px;
+  overflow: hidden;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding-bottom: 12px;
+  box-shadow: 0 0 4px #2e002f;
+  transition: 0.2s;
 }
 
-.icon-button img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 6px;
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
 
-.icon-button span {
-  display: block;
-  font-weight: bold;
+.card h3 {
+  font-size: 16px;
+  margin: 8px 0 4px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #bbbbbb;
+}
+
+.card.create {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #ff87d0;
+  background: transparent;
+}
+
+.plus-icon {
+  font-size: 28px;
+  color: #ff87d0;
+  margin-top: 40px;
+}
+
+/* Bottom Nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #1c001e;
+  border-top: 1px solid #2c002f;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  opacity: 0.6;
+}
+
+.nav-btn.active {
+  opacity: 1;
+}
+
+.nav-btn img {
+  width: 28px;
+  height: 28px;
+}
+
+/* Subscription Page */
+.subscription-table {
+  width: 100%;
+  margin-top: 12px;
+  border-collapse: collapse;
+  text-align: left;
   font-size: 14px;
-  color: #222;
+  color: #fff;
+}
+
+.subscription-table th,
+.subscription-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid #2d002e;
+}
+
+.subscription-table th {
+  color: #ff87d0;
+}
+
+.plans {
+  display: flex;
+  gap: 12px;
+  margin: 20px 16px;
+}
+
+.plan {
+  background: #1c001f;
+  padding: 12px;
+  border-radius: 12px;
+  flex: 1;
+  text-align: center;
+  border: 2px solid #2f002f;
+  color: white;
+}
+
+.plan.hot {
+  border-color: #ff4aa2;
+}
+
+.plan.best {
+  border-color: #66ffcc;
+}
+
+.plan strong {
+  font-size: 18px;
+  display: block;
+  margin-top: 6px;
+}
+
+.plan small {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+/* Coin Store */
+.coin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 0 16px;
+  margin-bottom: 80px;
+}
+
+.coin-option {
+  background: #1c001f;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  border: 2px solid #2e0032;
+}
+
+.coin-option.hot {
+  border-color: #ff87d0;
+}
+
+.coin-option strong {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.coin-option span {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* Buttons */
+.btn-full {
+  width: 90%;
+  margin: 20px auto;
+  display: block;
+  padding: 12px;
+  background: linear-gradient(to right, #ff4aa2, #ff87d0);
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Hidden Utility */
+.hidden {
+  display: none;
 }
