@@ -32405,15 +32405,15 @@ function Ei() {
         };
     default:
         return {
-            title: "Lustory",
-            logo: "https://cdn.defo.xyz/mo-talk/logo/img_logo_lustory.png",
-            testHost: "https://motalk-test.moquest.xyz",
-            host: "https://app.lustory.im",
-            supportBot: "https://t.me/LustoryHiBot",
-            supportBotName: "@LustoryHiBot",
-            termsUrl: "https://lustory.im/terms",
-            privacyUrl: "https://lustory.im/privacy",
-            webHost: "https://app.lustory.im/web/"
+            title: "AvaVerse",
+            logo: "https://avaminiapp-production.up.railway.app/logo.png", // (add your logo later)
+            testHost: "https://avaminiapp-production.up.railway.app",
+            host: "https://avaminiapp-production.up.railway.app",
+            supportBot: "https://t.me/ChatWithAva_bot",
+            supportBotName: "@ChatWithAva_bot",
+            termsUrl: "https://avaminiapp-production.up.railway.app/terms",
+            privacyUrl: "https://avaminiapp-production.up.railway.app/privacy",
+            webHost: "https://avaminiapp-production.up.railway.app/web/"
         }
     }
 }
