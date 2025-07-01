@@ -1,44 +1,94 @@
-// 🔄 Expand Telegram WebApp to full height
+// ✅ Telegram WebApp context
 const tg = window.Telegram.WebApp;
 tg.expand();
 
-// 🧠 Get Telegram Username
 const username = tg.initDataUnsafe?.user?.username || "Guest";
-document.getElementById("telegram-username").innerText = "@" + username;
+const userId = tg.initDataUnsafe?.user?.id || null;
 
-// ❤️ Ava’s dynamic mock data (replace with real backend later)
-const avaData = {
-  mood: "Needy and Naughty 🥵",
-  heart: 92, // percent
-  credits: 180,
+// ✅ Fake user data (replace later with real API)
+let coinCount = 0;
+let energyCount = 91;
+let activeStyle = 'Realistic';
+
+// ✅ DOM Elements
+const coinDisplay = document.getElementById("coin-count");
+const energyDisplay = document.getElementById("energy-count");
+const tabs = document.querySelectorAll(".tab");
+const navButtons = document.querySelectorAll(".nav-btn");
+const pages = {
+  home: document.getElementById("homePage"),
+  subscription: document.getElementById("subscriptionPage"),
+  coins: document.getElementById("coinPage"),
 };
 
-// 🎯 Inject Ava data into HTML
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("ava-mood").innerText = avaData.mood;
-  document.getElementById("heart-meter").innerText = `${avaData.heart}%`;
-  document.getElementById("nsfw-credits").innerText = avaData.credits;
+// ✅ Update coin and energy UI
+function updateStatusBar() {
+  coinDisplay.textContent = coinCount;
+  energyDisplay.textContent = `${energyCount}/100`;
+}
 
-  // Fill heart bar visually
-  const heartFill = document.getElementById("heart-fill");
-  if (heartFill) {
-    heartFill.style.width = `${avaData.heart}%`;
-  }
+// ✅ Tab switcher: Realistic / Anime
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    tabs.forEach((t) => t.classList.remove("active"));
+    tab.classList.add("active");
+    activeStyle = tab.textContent;
+    // Optional: re-render character cards based on selected style
+  });
 });
 
-// 🔘 Navigation Handlers
-function openDiary() {
-  tg.openLink("https://avaminiapp-production.up.railway.app/diary");
+// ✅ Navbar logic
+navButtons.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    navButtons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    // Hide all pages first
+    Object.values(pages).forEach((page) => page.classList.add("hidden"));
+
+    // Show selected page
+    if (index === 0) {
+      pages.home.classList.remove("hidden");
+    } else if (index === 1) {
+      pages.subscription.classList.remove("hidden");
+    } else if (index === 2) {
+      pages.coins.classList.remove("hidden");
+    }
+    // Add more logic if you add settings/chat page later
+  });
+});
+
+// ✅ Plus buttons
+document.querySelectorAll(".plus-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    tg.showAlert("This feature is not connected yet.");
+    // Later: open coin store or energy recharge
+  });
+});
+
+// ✅ Continue / Buy buttons (bottom pink)
+document.querySelectorAll(".btn-full").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    tg.showAlert("Action not implemented yet. Hook with backend.");
+  });
+});
+
+// ✅ Close button
+document.querySelector(".close-btn").addEventListener("click", () => {
+  tg.close();
+});
+
+// ✅ "Create Character" Card Click (optional future logic)
+const createCard = document.querySelector(".card.create");
+if (createCard) {
+  createCard.addEventListener("click", () => {
+    tg.showPopup({
+      title: "Coming Soon",
+      message: "AI character creation will be available soon.",
+      buttons: [{ id: "ok", type: "ok", text: "Okay" }],
+    });
+  });
 }
-function openRoom() {
-  tg.openLink("https://avaminiapp-production.up.railway.app/room");
-}
-function openRoleplay() {
-  tg.openLink("https://avaminiapp-production.up.railway.app/roleplay");
-}
-function openGifts() {
-  tg.openLink("https://avaminiapp-production.up.railway.app/gifts");
-}
-function openMiniGames() {
-  tg.openLink("https://avaminiapp-production.up.railway.app/games");
-}
+
+// ✅ Init UI
+updateStatusBar();
