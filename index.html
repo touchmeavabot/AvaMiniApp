@@ -2,65 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AvaVerse 💋</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lustory 18+</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="card-container">
-    <!-- Profile Block -->
-    <div class="profile-header">
-      <div class="profile-card">
-        <img src="ava_profile.png" class="profile-pic" />
-        <div class="name-info">
-          <h1 class="name">Ava</h1>
-          <p class="username">@AvaBot</p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Mood and Heart Stats -->
-    <div class="stat-box gradient-box">
-      <p>Mood</p>
-      <span>Flirty 😘</span>
-    </div>
-    <div class="stat-box gradient-box">
-      <p>Heart</p>
-      <div class="progress-bar">
-        <div class="progress-fill" style="width: 92%"></div>
-      </div>
-      <div class="credits">
-        <strong>NSFW</strong>
-        <span>180 Credits</span>
-      </div>
-    </div>
-
-    <!-- Character Model -->
-    <div class="avatar-box">
-      <img src="ava_3d_full.png" class="ava-character" />
-    </div>
-
-    <!-- Bottom Buttons -->
-    <div class="button-grid">
-      <div class="icon-button">
-        <img src="icons/diary.png" />
-        <span>Diary</span>
-      </div>
-      <div class="icon-button">
-        <img src="icons/gift.png" />
-        <span>Roleplay</span>
-      </div>
-      <div class="icon-button">
-        <img src="icons/roleplay.png" />
-        <span>Room</span>
-      </div>
-      <div class="icon-button">
-        <img src="icons/game.png" />
-        <span>Mini-Games</span>
-      </div>
-    </div>
+  <!-- Header -->
+  <div class="header">
+    <span class="close-btn">Close</span>
+    <h1>Lustory 18+</h1>
+    <span class="dot-btn">⋮</span>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Page Container -->
+  <div class="page" id="homePage">
+
+    <!-- Energy & Coin Bar -->
+    <div class="status-bar">
+      <div class="coin">
+        <img src="assets/coin.svg" />
+        <span id="coin-count">0</span>
+        <button class="plus-btn">+</button>
+      </div>
+      <div class="energy">
+        <img src="assets/energy.svg" />
+        <span id="energy-count">91/100</span>
+        <button class="plus-btn">+</button>
+      </div>
+    </div>
+
+    <!-- Character Section -->
+    <section class="section-title">Role</section>
+    <div class="style-toggle">
+      <button class="tab active">Realistic</button>
+      <button class="tab">Anime</button>
+    </div>
+
+    <div class="character-grid">
+      <!-- Example cards -->
+      <div class="card">
+        <img src="assets/lina.jpg" alt="Lina" />
+        <h3>Lina</h3>
+        <p>Sex-addicted Young Girl</p>
+      </div>
+      <div class="card">
+        <img src="assets/nami.jpg" alt="Nami" />
+        <h3>Nami</h3>
+        <p>Adventurer Nami</p>
+      </div>
+      <div class="card create">
+        <div class="plus-icon">＋</div>
+        <p>Create Character</p>
+      </div>
+    </div>
+
+    <!-- Subscription Benefits (hidden by default) -->
+    <div id="subscriptionPage" class="hidden">
+      <h2 class="section-title">Subscribe to Premium and enjoy the following benefits!</h2>
+      <table class="subscription-table">
+        <tr><th>Premium Benefits</th><th>Free</th><th>Premium</th></tr>
+        <tr><td>Coin Gift</td><td>0</td><td>1000</td></tr>
+        <tr><td>Energy Limit</td><td>100</td><td>1000</td></tr>
+        <tr><td>Energy Recovery</td><td>Slow</td><td>Fast</td></tr>
+        <tr><td>Remove photo blur</td><td>❌</td><td>✅</td></tr>
+        <tr><td>AI sends photo</td><td>❌</td><td>✅</td></tr>
+        <tr><td>Premium gifts</td><td>❌</td><td>✅</td></tr>
+        <tr><td>Create character with AI</td><td>❌</td><td>✅</td></tr>
+        <tr><td>Story Progress</td><td>2</td><td>Unlimited</td></tr>
+        <tr><td>Skip chat queue</td><td>❌</td><td>✅</td></tr>
+        <tr><td>Advanced AI</td><td>❌</td><td>✅</td></tr>
+      </table>
+
+      <div class="plans">
+        <div class="plan"><span>1 month</span><strong>$9.99</strong></div>
+        <div class="plan hot"><span>3 months</span><strong>$5.00/month</strong><small>Save 50%</small></div>
+        <div class="plan best"><span>12 months</span><strong>$2.50/month</strong><small>Save 75%</small></div>
+      </div>
+      <button class="btn-full">Continue</button>
+    </div>
+
+    <!-- Coin Store (hidden by default) -->
+    <div id="coinPage" class="hidden">
+      <h2 class="section-title">Buy Coins</h2>
+      <div class="coin-grid">
+        <div class="coin-option"><strong>168000</strong><span>$99.99</span></div>
+        <div class="coin-option"><strong>26000</strong><span>$19.99</span></div>
+        <div class="coin-option hot"><strong>11000</strong><span>$9.99</span></div>
+        <div class="coin-option"><strong>5000</strong><span>$6.99</span></div>
+      </div>
+      <button class="btn-full">Buy</button>
+    </div>
+
+  </div>
+
+  <!-- Bottom Nav -->
+  <div class="bottom-nav">
+    <button class="nav-btn active"><img src="assets/home.svg" /></button>
+    <button class="nav-btn"><img src="assets/chat.svg" /></button>
+    <button class="nav-btn"><img src="assets/characters.svg" /></button>
+    <button class="nav-btn"><img src="assets/settings.svg" /></button>
+  </div>
+
 </body>
 </html>
